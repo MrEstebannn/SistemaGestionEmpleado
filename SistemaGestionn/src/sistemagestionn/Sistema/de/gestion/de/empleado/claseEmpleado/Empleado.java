@@ -8,10 +8,10 @@ package sistemagestionn.Sistema.de.gestion.de.empleado.claseEmpleado;
  *
  * @author Duoc
  */
-public class Empleado {
+public abstract class Empleado {
     private String idEmpleado; 
     private String nombre;
-    private Double sueldoBase;         
+    public Double sueldoBase;         
 
     public Empleado(String idEmpleado, String nombre, Double sueldoBase) {
         this.idEmpleado = idEmpleado;
@@ -27,9 +27,7 @@ public class Empleado {
         return nombre;
     }
 
-    public Double getSueldoBase() {
-        return sueldoBase;
-    }
+   
 
     public void setIdEmpleado(String idEmpleado) {
         this.idEmpleado = idEmpleado;
@@ -39,9 +37,7 @@ public class Empleado {
         this.nombre = nombre;
     }
 
-    public void setSueldoBase(Double sueldoBase) {
-        this.sueldoBase = sueldoBase;
-    }
+    
 
     
     
@@ -52,4 +48,6 @@ public class Empleado {
 
 
     }
+    double calcularBonus();
+    
 }
