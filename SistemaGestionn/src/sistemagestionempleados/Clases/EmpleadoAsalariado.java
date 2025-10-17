@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package sistemagestionn.Sistema.de.gestion.de.empleado.claseEmpleado;
+package sistemagestionempleados.Clases;
 
-import sistemagestionn.interfaces.BonusCalculable;
+import sistemagestionempleados.Interfaces.BonusCalculable;
 
 /**
  *
@@ -15,6 +15,14 @@ public class EmpleadoAsalariado extends Empleado implements BonusCalculable {
     public EmpleadoAsalariado(String idEmpleado, String nombre, Double sueldoBase) {
         super(idEmpleado, nombre, sueldoBase);
     }
+
+    @Override
+    public Double calcularBonus() {
+        return sueldoBase * 0.05;
+    }
     
+    public Double Salario(){
+        return sueldoBase + calcularBonus();
+    }
     
-} 
+}

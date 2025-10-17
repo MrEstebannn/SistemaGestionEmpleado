@@ -2,8 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package sistemagestionn.Sistema.de.gestion.de.empleado.claseEmpleado;
+package sistemagestionempleados.Clases;
+
 import java.util.ArrayList;
+
 /**
  *
  * @author Duoc
@@ -11,42 +13,50 @@ import java.util.ArrayList;
 public class Departamento {
     private String idDepartamento;
     private String nombre;
-    private ArrayList<Empleado> empleado;
-    
-    
-    public void agregarEmpleado(Empleado e){
-        empleado.add(e);
-        
-         
-        
-      
+    private ArrayList<Empleado> empleados;
+
+    public Departamento(String idDepartamento, String nombre, ArrayList<Empleado> empleados) {
+        this.idDepartamento = idDepartamento;
+        this.nombre = nombre;
+        this.empleados = empleados;
+    }
+
+    public Departamento() {
     }
 
     public String getIdDepartamento() {
         return idDepartamento;
     }
 
-    public void setIdDepartamento(String idDepartamento) {
-        this.idDepartamento = idDepartamento;
-    }
-
     public String getNombre() {
         return nombre;
+    }
+
+    public ArrayList<Empleado> getEmpleados() {
+        return empleados;
+    }
+
+    public void setIdDepartamento(String idDepartamento) {
+        this.idDepartamento = idDepartamento;
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public ArrayList<Empleado> getEmpleado() {
-        return empleado;
+    public void setEmpleados(ArrayList<Empleado> empleados) {
+        this.empleados = empleados;
     }
-
-    public void setEmpleado(ArrayList<Empleado> empleado) {
-        this.empleado = empleado;
+    
+    
+    
+    
+    public void agregarEmpleado(Empleado e){
+    
+    this.empleados.add(e);
+    
     }
-
-    public void calcularSalarioTotal(){
-        
-    }
+    
+    public void calcularCostoTotalSalarios(){};
 }
+
